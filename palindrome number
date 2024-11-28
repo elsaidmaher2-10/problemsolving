@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+int readnumber(string message) {
+    int number = 0;
+    do {
+        cout << message << endl;
+        cin >> number;
+    } while (number < 0);
+    return number;
+}
+int reversenumber(int number) {
+    int reminder = 0;
+    int number2 = 0;
+    while (number > 0) {
+        reminder = number % 10;
+        number2 = number2 * 10 + reminder;
+        number = number / 10;
+
+    }
+    return number2;
+}
+void palindromenumber() {
+    int number = readnumber("Enter number");
+    int number2 = reversenumber(number);
+    if (number == number2) {
+        cout << "palindrome number";
+    }
+    else {
+        cout << "Not palindrome number";
+    }
+
+
+
+}
+
+
+int main()
+{
+    palindromenumber();
+
+}
+
+
