@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int readnumber(string message) {
+    int number = 0;
+    do {
+        cout << message << endl;
+        cin >> number;
+    } while (number < 0);
+    return number;
+}
+void printpattren() {
+    int number = readnumber("Enter number ");
+    for (int i = number; i>0;i--) {
+        for (int j = i;j > 0;j--) {
+            cout << i;
+        }cout << endl;
+    }
+}
+int main()
+{
+
+    printpattren();
+}
