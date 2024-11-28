@@ -1,0 +1,23 @@
+#include <iostream>
+using namespace std;
+int readnumber(string message) {
+    int number = 0;
+    do {
+        cout << message << endl;
+        cin >> number;
+    } while (number < 0);
+    return number;
+}
+void printletter_pattren() {
+    int number = readnumber("Enter number ");
+    for (int i = 0; i <number;i++) {
+        for (int j = 0;j <= i ;j++) {
+            cout << char(i+65);
+        }cout << endl;
+    }
+}
+int main()
+{
+
+    print_inverted_letter_pattren();
+}
