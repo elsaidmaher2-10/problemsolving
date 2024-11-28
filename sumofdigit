@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int readnumber(string message) {
+    int number;
+    do {
+        cout << message << endl;
+        cin >> number;
+    } while (number <= 0);
+    return number;
+}
+int  sumofdigit() {
+    int number = readnumber("Enter postivenumber");
+    int  revers = 0;
+    int sum = 0;
+    do {
+        revers = number % 10;
+        sum += revers;
+        number = number / 10;
+
+    } while (number != 0);
+    return sum;
+}
+
+int main()
+{
+    cout<<sumofdigit();
+}
+
