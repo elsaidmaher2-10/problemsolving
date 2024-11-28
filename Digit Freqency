@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int readnumber(string message) {
+    int number = 0;
+    do {
+        cout << message<<endl;
+        cin >> number;
+    } while (number < 0);
+    return number;
+}
+int  many_digit_ara_equal( int number, int digit) {
+    int reminder=0;
+    int countfrequency = 0;
+    while (number>0)
+    {
+        reminder = number % 10;
+        if (reminder == digit) {
+            countfrequency += 1;
+        }
+        number = number / 10;
+
+    }
+   
+    return countfrequency;
+}
+void printnumFre() {
+    int number = readnumber("Enter number ");
+
+    int digit = readnumber("Enter digit ");
+    int numfre = many_digit_ara_equal(number,digit);
+    cout <<"Digit "<<digit <<" frequency is (" << numfre <<")times ";
+}
+int main()
+{
+   
+    printnumFre();
+}
+
