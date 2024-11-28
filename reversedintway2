@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+int readnumber(string message) {
+    int number;
+    do {
+        cout << message << endl;
+        cin >> number;
+    } while (number <= 0);
+    return number;
+}
+void reversedint() {
+    int number = readnumber("Enter postivenumber");
+    int  reminder = 0;
+    int number2 = 0;
+    do {
+        reminder = number % 10;
+
+        number = number / 10;
+        number2 = number2 * 10 + reminder;
+
+    } while (number != 0);
+    cout << number2;
+}
+
+int main()
+{
+    reversedint();
+}
